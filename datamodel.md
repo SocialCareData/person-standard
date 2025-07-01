@@ -1,5 +1,3 @@
-# Describing a `Person`: Data model
-
 ```mermaid
   graph TD;
       A-->B;
