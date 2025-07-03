@@ -49,7 +49,7 @@ This work is being delivered in close coordination with the Department for Healt
 In which case, we will aim to select from another, established data standard in the fields of health and social care, before resorting to defining new standards. 
 8. Develop Standards in the Open: Encourage check and challenge from suppliers, the sector and others. 
 
-* [Raise an issue about Guiding Principles](https://github.com/SocialCareData/person-standard/issues/new?title=Issue+Regarding+People+Spec+Scope+Principles)
+* [Raise an issue about Guiding Principles](https://github.com/SocialCareData/person-standard/issues/new?title=Issue+Regarding+People+Spec+Principles)
 
 
 ## Conformance
