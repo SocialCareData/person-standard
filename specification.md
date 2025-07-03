@@ -16,3 +16,5 @@
 |↳ `UPRN`|-|-|0,1 (MAY)|Float16|The Unique Property Reference Number of the person's home address|
 |↳ `USRN`|-|-|0,1 (MAY)|Float16|The Unique Stree Reference Number of the person's home street address|
 |`Gender`|-|-|0,1 (MAY)|Code: {1=male (incl. trans male), 2=female (incl. trans female), 3=non-binary, 4=other, x=not known, z=not stated}|TThe person’s stated gender. This information does not pertain to biological sex.|
+
+[Click here to raise an issue with this specification](https://github.com/SocialCareData/person-standard/issues/new?body=Regarding+file:+https://github.com/SocialCareData/person-standard/blob/spec-building/specification.md)
