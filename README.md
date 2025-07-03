@@ -6,11 +6,17 @@ Effective Date: 2025-06-17
 ## Purpose
 This Person Data Standard will standardise some of the data collected about individuals in the children’s social care system, focussing on those fields required to distinguish one person from another, and to identify relationships between people. Its goal is to unblock the use of ‘Single View’ systems, as an aid to multi-agency information sharing.  
 
+[Raise an issues with Purpose] (https://github.com/SocialCareData/person-standard/issues/new?body=Issue+Regarding+People+Spec+Purpose)
+
 ## Scope
 This standard applies to the digital collection, storage, and exchange of key personal details to enable the Single View use case, as an enabler for multi-agency information sharing. 
 
+[Raise an issues with Scope] (https://github.com/SocialCareData/person-standard/issues/new?body=Issue+Regarding+People+Spec+Scope)
+
 ## Audience
 This document is for developers of case management systems; single view systems or systems these interoperate with. 
+
+[Raise an issues with Audience] (https://github.com/SocialCareData/person-standard/issues/new?body=Issue+Regarding+People+Spec+Audience)
 
 ## Context
 Social Finance, the Open Data Institute and Coram are working in partnership to develop data and interoperability standards for Children's Social Care. This work is funded by the Department for Education (DfE) as a part of the manifesto commitment to establish a Single Unique Identifier and secure its benefits for vulnerable children and young people.
@@ -24,6 +30,9 @@ This creation of these standards aims to make it easier for data created in one 
 We also plan to use the opportunity of developing national standards to normalise approaches to data sharing which implement privacy by design and by default.    
 
 This work is being delivered in close coordination with the Department for Health and Social Care (DHSC) given the important overlaps with adult social care, and under the direction of a steering board which brings together a range of stakeholders.
+
+[Raise an issues with Context] (https://github.com/SocialCareData/person-standard/issues/new?body=Issue+Regarding+People+Spec+Context)
+
 
 ## Guiding principles
 1. **Privacy By Design**: The data specifications must be developed to allow controlled access to data preserving privacy by default. 
@@ -40,9 +49,13 @@ This work is being delivered in close coordination with the Department for Healt
 In which case, we will aim to select from another, established data standard in the fields of health and social care, before resorting to defining new standards. 
 8. Develop Standards in the Open: Encourage check and challenge from suppliers, the sector and others. 
 
+[Raise an issues with Guiding Principles] (https://github.com/SocialCareData/person-standard/issues/new?body=Issue+Regarding+People+Spec+Scope+Principles)
+
+
 ## Conformance
 The following keywords are used to define requirement levels:
 - MUST: This word means that the definition is an absolute requirement of the specification. 
 - SHOULD: This word means that there may exist valid reasons in particular circumstances to ignore a particular item, but the full implications must be understood and carefully weighed before choosing a different course. 
 Example: A conformant record MUST include at least a `Family Name`, `Given Name(s)`, and `Date of Birth`. 
 
+[Raise an issues with Conformance] (https://github.com/SocialCareData/person-standard/issues/new?body=Issue+Regarding+People+Spec+Conformance)
