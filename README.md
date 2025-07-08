@@ -56,6 +56,7 @@ In which case, we will aim to select from another, established data standard in 
 The following keywords are used to define requirement levels:
 - MUST: This word means that the definition is an absolute requirement of the specification. 
 - SHOULD: This word means that there may exist valid reasons in particular circumstances to ignore a particular item, but the full implications must be understood and carefully weighed before choosing a different course. 
+
 Example: A conformant record MUST include at least a `Family Name`, `Given Name(s)`, and `Date of Birth`. 
 
 * [Raise an issue about Conformance](https://github.com/SocialCareData/person-standard/issues/new?title=Issue+Regarding+People+Spec+Conformance)
