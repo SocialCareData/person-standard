@@ -6,17 +6,17 @@ Effective Date: 2025-06-17
 ## Purpose
 This Person Data Standard will standardise some of the data collected about individuals in the children’s social care system, focussing on those fields required to distinguish one person from another, and to identify relationships between people. Its goal is to unblock the use of ‘Single View’ systems, as an aid to multi-agency information sharing.  
 
-<a href="https://github.com/SocialCareData/person-standard/issues/new?template=content_issue.yml&title=Issue+regarding+People+Spec+Purpose" class="web-button">Raise an issue about Purpose</a>
+<a href="https://github.com/SocialCareData/person-standard/issues/new?template=content_issue.yml&title=Issue+regarding+People+Spec+Purpose" class="web-button" target="_blank">Raise an issue about Purpose</a>
 
 ## Scope
 This standard applies to the digital collection, storage, and exchange of key personal details to enable the Single View use case, as an enabler for multi-agency information sharing. 
 
-<a href="https://github.com/SocialCareData/person-standard/issues/new?template=content_issue.yml&title=Issue+regarding+People+Spec+Scope" class="web-button">Raise an issue about Scope</a>
+<a href="https://github.com/SocialCareData/person-standard/issues/new?template=content_issue.yml&title=Issue+regarding+People+Spec+Scope" class="web-button" target="_blank">Raise an issue about Scope</a>
 
 ## Audience
 This document is for developers of case management systems; single view systems or systems these interoperate with. 
 
-<a href="https://github.com/SocialCareData/person-standard/issues/new?template=content_issue.yml&title=Issue+regarding+People+Spec+Audience" class="web-button">Raise an issue about Audience</a>
+<a href="https://github.com/SocialCareData/person-standard/issues/new?template=content_issue.yml&title=Issue+regarding+People+Spec+Audience" class="web-button" target="_blank">Raise an issue about Audience</a>
 
 ## Context
 Social Finance, the Open Data Institute and Coram are working in partnership to develop data and interoperability standards for Children's Social Care. This work is funded by the Department for Education (DfE) as a part of the manifesto commitment to establish a Single Unique Identifier and secure its benefits for vulnerable children and young people.
@@ -31,7 +31,7 @@ We also plan to use the opportunity of developing national standards to normalis
 
 This work is being delivered in close coordination with the Department for Health and Social Care (DHSC) given the important overlaps with adult social care, and under the direction of a steering board which brings together a range of stakeholders.
 
-<a href="https://github.com/SocialCareData/person-standard/issues/new?template=content_issue.yml&title=Issue+regarding+People+Spec+Context" class="web-button">Raise an issue about Context</a>
+<a href="https://github.com/SocialCareData/person-standard/issues/new?template=content_issue.yml&title=Issue+regarding+People+Spec+Context" class="web-button" target="_blank">Raise an issue about Context</a>
 
 
 ## Guiding principles
@@ -49,7 +49,7 @@ This work is being delivered in close coordination with the Department for Healt
 In which case, we will aim to select from another, established data standard in the fields of health and social care, before resorting to defining new standards. 
 8. Develop Standards in the Open: Encourage check and challenge from suppliers, the sector and others. 
 
-<a href="https://github.com/SocialCareData/person-standard/issues/new?template=content_issue.yml&title=Issue+regarding+People+Spec+Principles" class="web-button">Raise an issue about Guiding Principles</a>
+<a href="https://github.com/SocialCareData/person-standard/issues/new?template=content_issue.yml&title=Issue+regarding+People+Spec+Principles" class="web-button" target="_blank">Raise an issue about Guiding Principles</a>
 
 
 ## Conformance
@@ -59,4 +59,4 @@ The following keywords are used to define requirement levels:
 
 Example: A conformant record MUST include at least a `Family Name`, `Given Name(s)`, and `Date of Birth`. 
 
-<a href="https://github.com/SocialCareData/person-standard/issues/new?template=content_issue.yml&title=Issue+regarding+People+Spec+Conformance" class="web-button">Raise an issue about Conformance</a>
+<a href="https://github.com/SocialCareData/person-standard/issues/new?template=content_issue.yml&title=Issue+regarding+People+Spec+Conformance" class="web-button" target="_blank">Raise an issue about Conformance</a>
