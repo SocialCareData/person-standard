@@ -42,12 +42,12 @@ This work is being delivered in close coordination with the Department for Healt
 5. **Collaborative Data Exchange**: The data specifications must promote seamless interoperability and collaborative data sharing among stakeholders. 
 6. **Simplicity**: The data specifications must prioritise ease of understanding and implementation. Complexity should only be introduced when to address specific professional or regulatory requirements. 
 7. **Reuse Existing Standards**: Where possible, specifications should align with UK implementations of HL7 FHIR, an established international standard widely used in health systems and increasingly in social care. We will align with FHIR unless: 
-- It affects our ability to deliver the use case 
-- The burden of change (for suppliers) is too great. 
-- Counterparties are unable to adopt it. 
-- There is a prescribed government standard. 
-In which case, we will aim to select from another, established data standard in the fields of health and social care, before resorting to defining new standards. 
-8. Develop Standards in the Open: Encourage check and challenge from suppliers, the sector and others. 
+    - It affects our ability to deliver the use case 
+    - The burden of change (for suppliers) is too great. 
+    - Counterparties are unable to adopt it. 
+    - There is a prescribed government standard.
+    In which case, we will aim to select from another, established data standard in the fields of health and social care, before resorting to defining new standards. 
+8. **Develop Standards in the Open**: Encourage check and challenge from suppliers, the sector and others. 
 
 <a href="https://github.com/SocialCareData/person-standard/issues/new?template=content_issue.yml&title=Issue+regarding+People+Spec+Principles" class="web-button" target="_blank">Raise an issue about Guiding Principles</a>
 
