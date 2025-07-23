@@ -35,19 +35,21 @@ This work is being delivered in close coordination with the Department for Healt
 
 
 ## Guiding principles
-1. **Privacy By Design**: The data specifications must be developed to allow controlled access to data preserving privacy by default.
-2. **Security By Design**: The specifications must ensure information flow between parties adheres to security and confidentiality best practices.
-3. **Unambiguous Personal Data Representation**: The data specifications must enable the unambiguous identification of individuals and ensure that data about a person is always accurately linked to the person.
-4. **Enabling Quality Data**: The data specifications must define clear expectations for data types, formats, and permissible values, enabling systems to generate, exchange, and consume high-quality, reliable information that is fit for its intended purpose.
-5. **Collaborative Data Exchange**: The data specifications must promote seamless interoperability and collaborative data sharing among stakeholders.
-6. **Simplicity**: The data specifications must prioritise ease of understanding and implementation. Complexity should only be introduced when to address specific professional or regulatory requirements.
-7. **Reuse Existing Standards**: Where possible, specifications should align with UK implementations of HL7 FHIR, an established international standard widely used in health systems and increasingly in social care. We will align with FHIR unless:
-- It affects our ability to deliver the use case
-- The burden of change (for suppliers) is too great.
-- Counterparties are unable to adopt it.
-- There is a prescribed government standard.
-In which case, we will aim to select from another, established data standard in the fields of health and social care, before resorting to defining new standards.
-8. Develop Standards in the Open: Encourage check and challenge from suppliers, the sector and others.
+
+1. **Privacy By Design**: The data specifications must be developed to allow controlled access to data preserving privacy by default. 
+2. **Security By Design**: The specifications must ensure information flow between parties adheres to security and confidentiality best practices. 
+3. **Unambiguous Personal Data Representation**: The data specifications must enable the unambiguous identification of individuals and ensure that data about a person is always accurately linked to the person. 
+4. **Enabling Quality Data**: The data specifications must define clear expectations for data types, formats, and permissible values, enabling systems to generate, exchange, and consume high-quality, reliable information that is fit for its intended purpose. 
+5. **Collaborative Data Exchange**: The data specifications must promote seamless interoperability and collaborative data sharing among stakeholders. 
+6. **Simplicity**: The data specifications must prioritise ease of understanding and implementation. Complexity should only be introduced when to address specific professional or regulatory requirements. 
+7. **Reuse Existing Standards**: Where possible, specifications should align with UK implementations of HL7 FHIR, an established international standard widely used in health systems and increasingly in social care. We will align with FHIR unless: 
+    - It affects our ability to deliver the use case 
+    - The burden of change (for suppliers) is too great. 
+    - Counterparties are unable to adopt it. 
+    - There is a prescribed government standard.
+    In which case, we will aim to select from another, established data standard in the fields of health and social care, before resorting to defining new standards. 
+8. **Develop Standards in the Open**: Encourage check and challenge from suppliers, the sector and others. 
+
 
 <a href="https://github.com/SocialCareData/person-standard/issues/new?template=content_issue.yml&title=Issue+regarding+People+Spec+Principles" class="web-button" target="_blank">Raise an issue about Guiding Principles</a>
 
