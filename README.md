@@ -4,7 +4,7 @@ Status: Initial Draft
 Effective Date: 2025-06-17
 
 ## Purpose
-This Person Data Standard will standardise some of the data collected about individuals in the children’s social care system, focussing on those fields required to distinguish one person from another, and to identify relationships between people. Its goal is to unblock the use of ‘Single View’ systems, as an aid to multi-agency information sharing.
+This Person Data Standard will standardise some of the data collected about individuals in the children’s social care system, initially focussing on those fields required to distinguish one person from another, and to identify relationships between people. Its goal is to unblock the use of ‘Single View’ systems, as an aid to multi-agency information sharing.
 
 <a href="https://github.com/SocialCareData/person-standard/issues/new?template=content_issue.yml&title=Issue+regarding+People+Spec+Purpose" class="web-button" target="_blank">Raise an issue about Purpose</a>
 
