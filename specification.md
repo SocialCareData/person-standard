@@ -2,11 +2,14 @@
 
 |Field name|FHIR alignment|PDS alignment|Cardinality|Data Type & Format|Description & Reasoning|
 |----------|--------------|-------------|-----------|------------------|-----------------------|
-|`Identifier`|`Identifier.value`|`UNIQUE_REFERENCE` and `NHS_NO`|1 (MUST)|String(UTF-8)|A single unique identifier attached to the person. In our case, this will be a person’s NHS number.|
+|`Identifier`|`Identifier`||1, Many (MUST)|**Object**|Unique identifiers (IDs) associated with the person.|
+|↳ `Identifier Value`|`Identifier.value`|`UNIQUE_REFERENCE`|1 (MUST)|String(UTF-8)|A single unique identifier attached to the person. This will often be a person’s NHS number, but can also be another ID in case management systems. |
+|↳ `Identifier System`|`Identifier.system`||1 (MUST)|URI|A link to the system that the identifier adheres to. For example, an NHS number would have `https://fhir.nhs.uk/Id/nhs-number`.|
 |`Name`|`Patient.name (HumanName)`|-|1 (MUST)|**Object**|A container for the parts of a person's name. **Reasoning**: Storing name parts separately is essential for correct sorting, searching, and formal communication. Avoids a single "Full Name" field. |
-|↳ `Family Name`|`HumanName.family`|`FAMILY_NAME`|1 (MUST)|String(UTF-8)|The person's surname or family name. |
+|↳ `Family Name`|`HumanName.family`|`FAMILY_NAME`|1, Many (MUST)|String(UTF-8)|The person's surname or family name. |
 |↳ `Given Name(s)`|`HumanName.given`|`GIVEN_NAME`|1, Many (MUST)|String(UTF-8)|The person's first name, and any middle names. If multiple, they SHOULD be stored as separate entries if possible, or as a single space-separated string.|
 |↳ `Preferred Name(s)`|-|`OTHER_GIVEN_NAME`|0, Many|String(UTF-8)|Any preferred names used by the person. **Reasoning**: although FHIR does not have a field for preferred names, this information is too crucial for social care situations for it to not be considered in this specification. |
+|↳ `Use`|`HumanName.use`||0,1 (SHOULD)|Code:{usual, official, temp, nickname, anonymous, old, maiden}|The way this name object is used.|
 |`Date of Birth`|`Patient.birthDate`|`DATE_OF_BIRTH`|1 (MUST)|Date (ISO8601: `YYY-MM-DD`)|The person's date of birth. The `YYYY-MM-DD` ISO8601 format is the international standard, utilised by the NHS for date records.|
 |`Address`|`Patient.address (Address)`|-|0, Many (SHOULD)|**Object**|The physical location where the person can be contacted. A person can have more than one address (e.g., home, work). A structured address is required for validation, mapping, and mail services. Avoids a single "Full Address" text block. |
 |↳ `Line 1`|`Address.line`|`ADDRESS_LINE1`|1 (MUST, if Address is present)|String(UTF-8)|Street address, c/o.|
