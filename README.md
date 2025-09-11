@@ -1,8 +1,12 @@
 # Person Data Standard (Identification)
 
-Status: Version 0.9 - ready for testing
+## Status
+
+Version 0.9 - ready for testing
 
 Effective Date: 2025-09-11
+
+The MAIS Standards Working Group on 3rd September 2025 agreed to take this initial version of the specification forward to testing with implementers.
 
 ## Purpose
 This Person Data Standard will standardise some of the data collected about individuals in the children’s social care system, focussing initially on those fields required to distinguish one person from another, and to identify relationships between people. Its goal is to unblock the use of ‘Single View’ systems, as an aid to multi-agency information sharing.
@@ -21,15 +25,15 @@ This document is for all personnel involved in collecting, storing and processin
 
 ## Conformance
 The following keywords are used to define requirement levels:
-- MUST: This word means that the definition is an absolute requirement of the specification.
-- SHOULD: This word means that there may exist valid reasons in particular circumstances to ignore a particular item, but the full implications must be understood and carefully weighed before choosing a different course.
+  - MUST: This word means that the definition is an absolute requirement of the specification.
+  - SHOULD: This word means that there may exist valid reasons in particular circumstances to ignore a particular item, but the full implications must be understood and carefully weighed before choosing a different course.
+  - MAY: This word means that an item is truly optional. An implementation which does not include a particular option MUST be prepared to interoperate with another implementation which does include the option, though perhaps with reduced functionality.
 
 Example: A conformant record MUST include at least a `Family Name`, `Given Name(s)`, and `Date of Birth`.
 
 <a href="https://github.com/SocialCareData/person-standard/issues/new?template=content_issue.yml&title=Issue+regarding+People+Spec+Conformance" class="web-button" target="_blank">Raise an issue about Conformance</a>
 
-<details open>
-<summary><h2 style="display:inline-block">Context</h2></summary>
+## Context
 
 Social Finance, the Open Data Institute and Coram are working in partnership to develop data and interoperability standards for Children's Social Care. This work is funded by the Department for Education (DfE) as a part of the manifesto commitment to establish a Single Unique Identifier and secure its benefits for vulnerable children and young people.
 
@@ -44,10 +48,8 @@ We also plan to use the opportunity of developing national standards to normalis
 This work is being delivered in close coordination with the Department for Health and Social Care (DHSC) given the important overlaps with adult social care, and under the direction of a steering board which brings together a range of stakeholders.
 
 <a href="https://github.com/SocialCareData/person-standard/issues/new?template=content_issue.yml&title=Issue+regarding+People+Spec+Context" class="web-button" target="_blank">Raise an issue about Context</a>
-</details>
 
-<details open>
-<summary><h2 style="display:inline-block">Guiding principles</h2></summary>
+## Guiding principles
 
 1. **Privacy By Design**: The data specifications must be developed to allow controlled access to data preserving privacy by default.
 2. **Security By Design**: The specifications must ensure information flow between parties adheres to security and confidentiality best practices.
@@ -65,6 +67,6 @@ This work is being delivered in close coordination with the Department for Healt
 
 
 <a href="https://github.com/SocialCareData/person-standard/issues/new?template=content_issue.yml&title=Issue+regarding+People+Spec+Principles" class="web-button" target="_blank">Raise an issue about Guiding Principles</a>
-</details>
+
 
 
