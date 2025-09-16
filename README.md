@@ -9,7 +9,7 @@ Effective Date: 2025-09-11
 The MAIS Standards Working Group on 3rd September 2025 agreed to take this initial version of the specification forward to testing with implementers.
 
 ## Purpose
-This Person Data Standard will standardise some of the data collected about individuals in the children’s social care system, focussing initially on those fields required to distinguish one person from another, and to identify relationships between people. Its goal is to unblock the use of ‘Single View’ systems, as an aid to multi-agency information sharing.
+This Person Data Standard will standardise some of the data collected about individuals in children’s and adult social care systems, focussing initially on those fields required to distinguish one person from another, and to identify relationships between people. Its goal is to unblock the use of ‘Single View’ systems, as an aid to multi-agency information sharing.
 
 <a href="https://github.com/SocialCareData/person-standard/issues/new?template=content_issue.yml&title=Issue+regarding+People+Spec+Purpose" class="web-button" target="_blank">Raise an issue about Purpose</a>
 
@@ -35,17 +35,14 @@ Example: A conformant record MUST include at least a `Family Name`, `Given Name(
 
 ## Context
 
-Social Finance, the Open Data Institute and Coram are working in partnership to develop data and interoperability standards for Children's Social Care. This work is funded by the Department for Education (DfE) as a part of the manifesto commitment to establish a Single Unique Identifier and secure its benefits for vulnerable children and young people.
+Social Finance, the Open Data Institute and Coram are working in partnership to develop data and interoperability standards for Children's and Adults’ Social Care. This work is jointly funded by the Department for Education (DfE) and Department of Health and Social Care (DHSC) and is under the direction of a steering board which brings together a range of stakeholders.
 
 This creation of these standards aims to make it easier for data created in one system to be accessed in another, and to be meaningful in another. It aims to deliver:
 - Improved safeguarding – with social workers in more LAs able to look up information in partners’ systems.
-- Improved analysis – by making it easier to analyse the interaction of different services. E.g. for understanding the impact of timely CAMHS provision (or its absence) on children’s journeys into care.
+- Improved analysis – by making it easier to analyse the interaction of different services.
 - Reduced administration – with productivity-enhancing tools for social workers more easily able to integrate with Case Management Systems (CMS), and routine exchange and recording of notifications now easier to automate.
 
-
 We also plan to use the opportunity of developing national standards to normalise approaches to data sharing which implement privacy by design and by default.
-
-This work is being delivered in close coordination with the Department for Health and Social Care (DHSC) given the important overlaps with adult social care, and under the direction of a steering board which brings together a range of stakeholders.
 
 <a href="https://github.com/SocialCareData/person-standard/issues/new?template=content_issue.yml&title=Issue+regarding+People+Spec+Context" class="web-button" target="_blank">Raise an issue about Context</a>
 
