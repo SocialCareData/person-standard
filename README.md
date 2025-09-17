@@ -2,7 +2,7 @@
 
 ## Status
 
-Version 0.9 - ready for testing
+Version 0.2 - ready for testing
 
 Effective Date: 2025-09-11
 
