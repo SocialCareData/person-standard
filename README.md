@@ -23,6 +23,20 @@ This document is for all personnel involved in collecting, storing and processin
 
 <a href="https://github.com/SocialCareData/person-standard/issues/new?template=content_issue.yml&title=Issue+regarding+People+Spec+Audience" class="web-button" target="_blank">Raise an issue about Audience</a>
 
+## Alignment with other specifications
+
+In creating this specification, we reviewed the following:
+
+- Adult Social Care Minimum Operational Data Standard (MODS)
+- PRSB Healthy Child Record Standard
+- PRSB Core Information Standard (CIS)
+- Fast Health Interoperability Resource (FHIR, patient resource, not person)
+- Department for Education Common Basic Dataset (CBDS)
+- schema.org
+- iStandUK Scalable Approach to Vulnerability via Interoperability (SAVVI)
+
+Our person specification is based on a reduced set of attributes from the FHIR 'Patient' resource, a foundational standard for describing individuals receiving services across health and social care sectors. We also relate data elements to the Person Demographics Service (PDS), the national NHS database for patient details.
+
 ## Conformance
 The following keywords are used to define requirement levels:
   - MUST: This word means that the definition is an absolute requirement of the specification.
