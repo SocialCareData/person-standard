@@ -2,26 +2,26 @@
 
 |Field name|FHIR alignment|PDS alignment|Cardinality|Data Type & Format|Description|
 |----------|--------------|-------------|-----------|------------------|-----------|
-|`Identifier`|`Identifier`||1, Many (MUST)|Object|Unique identifiers (IDs) associated with the person.|
-|↳ `Identifier.value`|`Identifier.value`|`UNIQUE_REFERENCE`|1 (MUST)|String(UTF-8)|A single unique identifier attached to the person (e.g., NHS number).|
-|↳ `Identifier.system`|`Identifier.system`||1 (MUST)|URI|System that the identifier adheres to (e.g., https://fhir.nhs.uk/Id/nhs-number).|
-|`Name`|`Patient.name (HumanName)`|-|1 (MUST)|Object|Container for name parts.|
-|↳ `Name.familyName`|`HumanName.family`|`FAMILY_NAME`|1, Many (MUST)|String(UTF-8)|Surname or family name.|
-|↳ `Name.givenNames`|`HumanName.given`|`GIVEN_NAME`|1, Many (MUST)|String(UTF-8)|First and any middle names. If multiple, store as separate entries if possible.|
-|↳ `Name.preferredNames`|-|`OTHER_GIVEN_NAME`|0, Many (MAY)|String(UTF-8)|Any preferred names used by the person.|
-|↳ `Name.use`|`HumanName.use`||0,1 (SHOULD)|Name.useCode|How this name instance is used.|
-|`DateOfBirth`|`Patient.birthDate`|`DATE_OF_BIRTH`|1 (MUST)||The person's date of birth.|
-|↳ `DateOfBirth.date`|| - |0,1 (MAY)|Date (ISO8601: `YYYY-MM-DD`)|ISO8601 formatted dat of birth.|
-|↳ `DateOfBirth.accuracyIndicator`|Extension:`date-accuracy-indicator`| - |0,1 (MAY)|DateOfBirth.accuracyIndicatorCode|Indicates which parts of the date are known to be accurate (A), estimated (E) or unknown (U)|
-|`Address`|`Patient.address (Address)`|-|0, Many (SHOULD)|Object|Physical location(s) where the person can be contacted.|
-|↳ `Address.line1`|`Address.line`|`ADDRESS_LINE1`|1 (MUST, if Address is present)|String(UTF-8)|Street address, c/o.|
-|↳ `Address.line2`|`Address.line`|`ADDRESS_LINE2`|0,1 (MAY)|String(UTF-8)|Apartment, suite, unit, building, floor, etc.|
-|↳ `Address.city`|`Address.city`|-|1 (MUST, if Address is present)|String(UTF-8)|City, town, or village.|
-|↳ `Address.postcode`|`Address.postalCode`|`POSTCODE`|1 (MUST, if Address is present)|String(UTF-8)|Postcode for address.|
-|↳ `Addres.UPRN`|-|-|0,1 (MAY)|Float16|Unique Property Reference Number of the address.|
-|↳ `Address.USRN`|-|-|0,1 (MAY)|Float16|Unique Street Reference Number of the address.|
-|`Gender`|Extension: UK Core `PersonStatedGenderCode`|`PERSON_STATED_GENDER_CODE`|Gender.code|The person’s stated gender. This information does not pertain to biological sex.|
-|`Sex`|Extension: UK Core `PersonPhenotypicSex`|`PERSON_PHENOTYPIC_SEX`|0,1 (MAY)|Sex.code|Observed phenotypic sex, where recorded.|
+|`Person.Identifier`|`Identifier`||1, Many (MUST)|Object|Unique identifiers (IDs) associated with the person.|
+|↳ `Person.Identifier.value`|`Identifier.value`|`UNIQUE_REFERENCE`|1 (MUST)|String(UTF-8)|A single unique identifier attached to the person (e.g., NHS number).|
+|↳ `Person.Identifier.system`|`Identifier.system`||1 (MUST)|URI|System that the identifier adheres to (e.g., https://fhir.nhs.uk/Id/nhs-number).|
+|`Person.Name`|`Patient.name (HumanName)`|-|1 (MUST)|Object|Container for name parts.|
+|↳ `Person.Name.familyName`|`HumanName.family`|`FAMILY_NAME`|1, Many (MUST)|String(UTF-8)|Surname or family name.|
+|↳ `Person.Name.givenNames`|`HumanName.given`|`GIVEN_NAME`|1, Many (MUST)|String(UTF-8)|First and any middle names. If multiple, store as separate entries if possible.|
+|↳ `Person.Name.preferredNames`|-|`OTHER_GIVEN_NAME`|0, Many (MAY)|String(UTF-8)|Any preferred names used by the person.|
+|↳ `Person.Name.use`|`HumanName.use`||0,1 (SHOULD)|Name.useCode|How this name instance is used.|
+|`Person.DateOfBirth`|`Patient.birthDate`|`DATE_OF_BIRTH`|1 (MUST)||The person's date of birth.|
+|↳ `Person.DateOfBirth.date`|| - |0,1 (MAY)|Date (ISO8601: `YYYY-MM-DD`)|ISO8601 formatted dat of birth.|
+|↳ `Person.DateOfBirth.accuracyIndicator`|Extension:`date-accuracy-indicator`| - |0,1 (MAY)|DateOfBirth.accuracyIndicatorCode|Indicates which parts of the date are known to be accurate (A), estimated (E) or unknown (U)|
+|`Person.Address`|`Patient.address (Address)`|-|0, Many (SHOULD)|Object|Physical location(s) where the person can be contacted.|
+|↳ `Person.Address.line1`|`Address.line`|`ADDRESS_LINE1`|1 (MUST, if Address is present)|String(UTF-8)|Street address, c/o.|
+|↳ `Person.Address.line2`|`Address.line`|`ADDRESS_LINE2`|0,1 (MAY)|String(UTF-8)|Apartment, suite, unit, building, floor, etc.|
+|↳ `Person.Address.city`|`Address.city`|-|1 (MUST, if Address is present)|String(UTF-8)|City, town, or village.|
+|↳ `Person.Address.postcode`|`Address.postalCode`|`POSTCODE`|1 (MUST, if Address is present)|String(UTF-8)|Postcode for address.|
+|↳ `Person.Addres.UPRN`|-|-|0,1 (MAY)|Float16|Unique Property Reference Number of the address.|
+|↳ `Person.Address.USRN`|-|-|0,1 (MAY)|Float16|Unique Street Reference Number of the address.|
+|`Person.Gender`|Extension: UK Core `PersonStatedGenderCode`|`PERSON_STATED_GENDER_CODE`|Gender.code|The person’s stated gender. This information does not pertain to biological sex.|
+|`Person.Sex`|Extension: UK Core `PersonPhenotypicSex`|`PERSON_PHENOTYPIC_SEX`|0,1 (MAY)|Sex.code|Observed phenotypic sex, where recorded.|
 
 
 Notes
