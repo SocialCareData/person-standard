@@ -21,7 +21,7 @@
 |↳ `Person.Addres.UPRN`|-|-|0,1 (MAY)|Float16|Unique Property Reference Number of the address.|
 |↳ `Person.Address.USRN`|-|-|0,1 (MAY)|Float16|Unique Street Reference Number of the address.|
 |`Person.Gender`|Extension: UK Core `PersonStatedGenderCode`|`PERSON_STATED_GENDER_CODE`|`PersonGenderCode`|The person’s stated gender. This information does not pertain to biological sex.|
-|`Person.Sex`|Extension: UK Core `PersonPhenotypicSex`|`PERSON_PHENOTYPIC_SEX`|0,1 (MAY)|PersonSexCode|Observed phenotypic sex, where recorded.|
+|`Person.SexCode`|Extension: UK Core `PersonPhenotypicSex`|`PERSON_PHENOTYPIC_SEX`|0,1 (MAY)|PersonSexCode|Observed phenotypic sex, where recorded.|
 
 
 Notes
@@ -31,5 +31,42 @@ Notes
 - Gender vs Sex: We recognise this is an emotive topic. Our approach recognises government policy but ensures practitioners' and service delivery needs are met. Sex is used in matching in some systems.
 - Birth date accuracy: Indicates where the parts of a date are unknown or estimated.
 
+## JSON-LD Data Model Example
+
+```json
+{
+    "@context": {
+        "@language": "en",
+        "@vocab": "https://socialcaredata.github.io/spec/"
+    },
+    "@type": "Person",
+    "Identifier": [{
+        "value": "string",
+        "system": "uri"
+    }],
+    "Name": {
+        "familyName": "string",
+        "givenNames": ["string"],
+        "preferredNames": ["string"],
+        "use": "PersonNameUseCode"
+    },
+    "DateOfBirth": {
+        "date": "YYYY-MM-DD",
+        "accuracyIndicator": "DateOfBirthAccuracyIndicatorCode"
+    },
+    "Address": [{
+        "line1": "string",
+        "line2": "string",
+        "city": "string",
+        "postcode": "string",
+        "UPRN": "float16",
+        "USRN": "float16"
+    }],
+    "Gender": "PersonGenderCode",
+    "SexCode": "PersonSexCode"
+}
+```
+
+The above represents the complete data model for a Person record. All fields should conform to the cardinality and data types specified in the field table above.
 
 <a href="https://github.com/SocialCareData/person-standard/issues/new?template=content_issue.yml&title=Issue+regarding+People+Spec+Specification" class="web-button" target="_blank">Raise an issue about Specification</a>
