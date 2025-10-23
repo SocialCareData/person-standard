@@ -1,0 +1,24 @@
+{
+    "@context": {
+        "@language": "en",
+        "@vocab": "https://socialcaredata.github.io/spec/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "DateOfBirth": {
+            "@context": {
+                "date": {
+                    "@type": "xsd:date"
+                }
+            }
+        },
+        "Address": {
+            "@context": {
+                "UPRN": {
+                    "@type": "xsd:float"
+                },
+                "USRN": {
+                    "@type": "xsd:float"
+                }
+            }
+        }
+    }
+}

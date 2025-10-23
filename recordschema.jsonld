@@ -4,7 +4,22 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "schema": "http://schema.org/",
-        "sh": "http://www.w3.org/ns/shacl#"
+        "sh": "http://www.w3.org/ns/shacl#",
+        "DateOfBirth": {
+            "@context": {
+                "date": { "@type": "xsd:date" }
+            }
+        },
+        "Address": {
+            "@context": {
+                "UPRN": {
+                    "@type": "xsd:float"
+                },
+                "USRN": {
+                    "@type": "xsd:float"
+                }
+            }
+        }
     },
     "@type": "rdfs:Class",
     "rdfs:label": "Person",

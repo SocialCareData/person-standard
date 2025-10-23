@@ -10,6 +10,7 @@
   "dependencies": {
     "rdf-validate-shacl": "^0.5.1",
     "n3": "^1.17.1",
-    "jsonld": "^8.3.1"
+    "jsonld": "^8.3.1",
+    "ajv": "^8.12.0"
   }
 }
