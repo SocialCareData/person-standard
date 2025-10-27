@@ -1,31 +1,31 @@
 {
-    "@context": {
-        "@language": "en",
-        "@vocab": "https://socialcaredata.github.io/spec/"
-    },
-    "@type": "Person",
-    "Identifier": [{
-        "value": "1234567890",
-        "system": "https://fhir.nhs.uk/Id/nhs-number"
-    }],
-    "Name": {
-        "familyName": "Smith",
-        "givenNames": ["John", "James"],
-        "preferredNames": ["Jack"],
-        "use": "usual"
-    },
-    "DateOfBirth": {
-        "date": "1980-06-15",
-        "accuracyIndicator": "AAA"
-    },
-    "Address": [{
-        "line1": "123 High Street",
-        "line2": "Flat 4",
-        "city": "London",
-        "postcode": "SW1A 1AA",
-        "UPRN": 10093423789,
-        "USRN": 8401234
-    }],
-    "Gender": "male",
-    "SexCode": "male"
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://socialcaredata.github.io/spec/"
+  },
+  "@type": "Person",
+  "Identifier": [{
+    "value": "1234567890",
+    "system": "https://fhir.nhs.uk/Id/nhs-number"
+  }],
+  "Name": {
+    "familyName": "Smith",
+    "givenNames": ["John", "James"],
+    "preferredNames": ["Jack"],
+    "use": "usual"
+  },
+  "DateOfBirth": {
+    "date": "1980-06-15",
+    "accuracyIndicator": "AAA"
+  },
+  "Address": [{
+    "line1": "123 High Street",
+    "line2": "Flat 4",
+    "city": "London",
+    "postcode": "SW1A 1AA",
+    "UPRN": 10093423789,
+    "USRN": 8401234
+  }],
+  "Gender": "1",
+  "SexCode": "1"
 }

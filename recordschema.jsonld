@@ -1,153 +1,108 @@
 {
-    "@context": {
-        "@vocab": "https://socialcaredata.github.io/spec/",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "schema": "http://schema.org/",
-        "sh": "http://www.w3.org/ns/shacl#",
-        "DateOfBirth": {
-            "@context": {
-                "date": { "@type": "xsd:date" }
-            }
-        },
-        "Address": {
-            "@context": {
-                "UPRN": {
-                    "@type": "xsd:float"
-                },
-                "USRN": {
-                    "@type": "xsd:float"
-                }
-            }
-        }
+  "@context": {
+    "@vocab": "https://socialcaredata.github.io/spec/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "https://schema.org/",
+    "sh": "http://www.w3.org/ns/shacl#"
+  },
+
+  "@id": "PersonShape",
+  "@type": "sh:NodeShape",
+  "rdfs:label": "Person",
+  "rdfs:comment": "A person record in the social care system",
+  "sh:targetClass": "Person",
+
+  "sh:property": [
+    {
+      "@type": "sh:PropertyShape",
+      "sh:path": "Identifier",
+      "sh:minCount": 1,
+      "sh:node": {
+        "@type": "sh:NodeShape",
+        "sh:property": [
+          { "sh:path": "value",  "sh:datatype": "xsd:string",  "sh:minCount": 1, "sh:maxCount": 1 },
+          { "sh:path": "system", "sh:datatype": "xsd:anyURI", "sh:minCount": 1, "sh:maxCount": 1 }
+        ]
+      }
     },
-    "@type": "rdfs:Class",
-    "rdfs:label": "Person",
-    "rdfs:comment": "A person record in the social care system",
-    "sh:property": [
-        {
-            "@type": "sh:PropertyShape",
-            "sh:path": "Identifier",
-            "sh:minCount": 1,
-            "sh:class": {
-                "@type": "rdfs:Class",
-                "sh:property": [
-                    {
-                        "sh:path": "value",
-                        "sh:datatype": "xsd:string",
-                        "sh:minCount": 1,
-                        "sh:maxCount": 1
-                    },
-                    {
-                        "sh:path": "system",
-                        "sh:datatype": "xsd:anyURI",
-                        "sh:minCount": 1,
-                        "sh:maxCount": 1
-                    }
-                ]
-            }
-        },
-        {
-            "@type": "sh:PropertyShape",
-            "sh:path": "Name",
-            "sh:minCount": 1,
-            "sh:maxCount": 1,
-            "sh:class": {
-                "@type": "rdfs:Class",
-                "sh:property": [
-                    {
-                        "sh:path": "familyName",
-                        "sh:datatype": "xsd:string",
-                        "sh:minCount": 1
-                    },
-                    {
-                        "sh:path": "givenNames",
-                        "sh:datatype": "xsd:string",
-                        "sh:minCount": 1
-                    },
-                    {
-                        "sh:path": "preferredNames",
-                        "sh:datatype": "xsd:string"
-                    },
-                    {
-                        "sh:path": "use",
-                        "sh:datatype": "xsd:string",
-                        "sh:nodeKind": "sh:IRI",
-                        "sh:class": "https://socialcaredata.github.io/spec/controlled-vocabularies/PersonNameUseCode"
-                    }
-                ]
-            }
-        },
-        {
-            "@type": "sh:PropertyShape",
-            "sh:path": "DateOfBirth",
-            "sh:minCount": 1,
-            "sh:maxCount": 1,
-            "sh:class": {
-                "@type": "rdfs:Class",
-                "sh:property": [
-                    {
-                        "sh:path": "date",
-                        "sh:datatype": "xsd:date"
-                    },
-                    {
-                        "sh:path": "accuracyIndicator",
-                        "sh:datatype": "xsd:string",
-                        "sh:nodeKind": "sh:IRI",
-                        "sh:class": "https://socialcaredata.github.io/spec/controlled-vocabularies/DateOfBirthAccuracyIndicatorCode"
-                    }
-                ]
-            }
-        },
-        {
-            "@type": "sh:PropertyShape",
-            "sh:path": "Address",
-            "sh:class": {
-                "@type": "rdfs:Class",
-                "sh:property": [
-                    {
-                        "sh:path": "line1",
-                        "sh:datatype": "xsd:string",
-                        "sh:minCount": 1
-                    },
-                    {
-                        "sh:path": "line2",
-                        "sh:datatype": "xsd:string"
-                    },
-                    {
-                        "sh:path": "city",
-                        "sh:datatype": "xsd:string",
-                        "sh:minCount": 1
-                    },
-                    {
-                        "sh:path": "postcode",
-                        "sh:datatype": "xsd:string",
-                        "sh:minCount": 1
-                    },
-                    {
-                        "sh:path": "UPRN",
-                        "sh:datatype": "xsd:float"
-                    },
-                    {
-                        "sh:path": "USRN",
-                        "sh:datatype": "xsd:float"
-                    }
-                ]
-            }
-        },
-        {
-            "@type": "sh:PropertyShape",
-            "sh:path": "Gender",
+
+    {
+      "@type": "sh:PropertyShape",
+      "sh:path": "Name",
+      "sh:minCount": 1,
+      "sh:maxCount": 1,
+      "sh:node": {
+        "@type": "sh:NodeShape",
+        "sh:property": [
+          { "sh:path": "familyName",     "sh:datatype": "xsd:string", "sh:minCount": 1, "sh:maxCount": 1 },
+          { "sh:path": "givenNames",     "sh:datatype": "xsd:string", "sh:minCount": 1 },
+          { "sh:path": "preferredNames", "sh:datatype": "xsd:string" },
+          {
+            "sh:path": "use",
             "sh:datatype": "xsd:string",
-            "sh:nodeKind": "sh:IRI",
-            "sh:class": "https://socialcaredata.github.io/spec/controlled-vocabularies/PersonGenderCode"
-        },
-        {
-            "@type": "sh:PropertyShape",
-            "sh:path": "SexCode",
+            "sh:maxCount": 1,
+            "sh:description": "PersonNameUseCode",
+            "sh:in": ["usual","official","temp","nickname","anonymous","old","maiden"]
+          }
+        ]
+      }
+    },
+
+    {
+      "@type": "sh:PropertyShape",
+      "sh:path": "DateOfBirth",
+      "sh:minCount": 1,
+      "sh:maxCount": 1,
+      "sh:node": {
+        "@type": "sh:NodeShape",
+        "sh:property": [
+          { "sh:path": "date", "sh:datatype": "xsd:date", "sh:maxCount": 1 },
+          {
+            "sh:path": "accuracyIndicator",
             "sh:datatype": "xsd:string",
-            "sh:nodeKind": "sh:IRI",
-            "sh:class": "https://socialcaredata.github.io/spec/controlled-vocabularies/PersonSexCode"
-        }
-    ]
+            "sh:maxCount": 1,
+            "sh:description": "DateOfBirthaccuracyIndicatorCode (Y-M-D)",
+            "sh:pattern": "^[AEUX]{3}$",
+            "sh:message": "Must be three letters (Y-M-D), each in {A,E,U,X}, e.g., AAA, AEU, AAX."
+          }
+        ]
+      }
+    },
+
+    {
+      "@type": "sh:PropertyShape",
+      "sh:path": "Address",
+      "sh:node": {
+        "@type": "sh:NodeShape",
+        "sh:property": [
+          { "sh:path": "line1",    "sh:datatype": "xsd:string",  "sh:minCount": 1, "sh:maxCount": 1 },
+          { "sh:path": "line2",    "sh:datatype": "xsd:string",  "sh:maxCount": 1 },
+          { "sh:path": "city",     "sh:datatype": "xsd:string",  "sh:minCount": 1, "sh:maxCount": 1 },
+          { "sh:path": "postcode", "sh:datatype": "xsd:string",  "sh:minCount": 1, "sh:maxCount": 1,
+            "sh:pattern": "^[A-Z]{1,2}\\d[A-Z\\d]? ?\\d[A-Z]{2}$" },
+          { "sh:path": "UPRN",     "sh:datatype": "xsd:float",   "sh:maxCount": 1 },
+          { "sh:path": "USRN",     "sh:datatype": "xsd:float",   "sh:maxCount": 1 }
+        ]
+      }
+    },
+
+    {
+      "@type": "sh:PropertyShape",
+      "sh:path": "Gender",
+      "sh:datatype": "xsd:string",
+      "sh:maxCount": 1,
+      "sh:description": "PersonGenderCode (NHS)",
+      "sh:in": ["1","2","9"]
+    },
+
+    {
+      "@type": "sh:PropertyShape",
+      "sh:path": "SexCode",
+      "sh:datatype": "xsd:string",
+      "sh:maxCount": 1,
+      "sh:description": "Person.SexCode (NHS phenotypic)",
+      "sh:in": ["1","2","9"]
+    }
+  ]
 }
