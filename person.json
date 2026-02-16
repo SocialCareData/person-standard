@@ -1,0 +1,160 @@
+{
+  "metadata": {
+    "title": "Person Data Standard (Identification)",
+    "version": "0.2",
+    "status": "draft",
+    "effectiveDate": "2025-09-11",
+    "description": "Standardised data fields for identifying individuals in children’s and adult social care systems."
+  },
+  "entities": [
+    {
+      "name": "Person",
+      "description": "The individual receiving services or being identified.",
+      "fields": [
+        {
+          "name": "Identifier",
+          "type": "Object",
+          "cardinality": "1..*",
+          "description": "Unique identifiers (IDs) associated with the person.",
+          "children": [
+            {
+              "name": "value",
+              "type": "String",
+              "cardinality": "1..1",
+              "description": "A single unique identifier attached to the person (e.g., NHS number).",
+              "alignment": { "fhir": "Identifier.value", "pds": "UNIQUE_REFERENCE" }
+            },
+            {
+              "name": "system",
+              "type": "URI",
+              "cardinality": "1..1",
+              "description": "System that the identifier adheres to (e.g., https://fhir.nhs.uk/Id/nhs-number).",
+              "alignment": { "fhir": "Identifier.system" }
+            }
+          ]
+        },
+        {
+          "name": "Name",
+          "type": "Object",
+          "cardinality": "1..1",
+          "description": "Container for name parts.",
+          "children": [
+            {
+              "name": "familyName",
+              "type": "String",
+              "cardinality": "1..*",
+              "description": "Surname or family name.",
+              "alignment": { "fhir": "HumanName.family", "pds": "FAMILY_NAME" }
+            },
+            {
+              "name": "givenNames",
+              "type": "String",
+              "cardinality": "1..*",
+              "description": "First and any middle names.",
+              "alignment": { "fhir": "HumanName.given", "pds": "GIVEN_NAME" }
+            },
+            {
+              "name": "preferredNames",
+              "type": "String",
+              "cardinality": "0..*",
+              "description": "Any preferred names used by the person.",
+              "alignment": { "pds": "OTHER_GIVEN_NAME" }
+            },
+            {
+              "name": "use",
+              "type": "Code",
+              "cardinality": "0..1",
+              "description": "How this name instance is used.",
+              "alignment": { "fhir": "HumanName.use" }
+            }
+          ]
+        },
+        {
+          "name": "DateOfBirth",
+          "type": "Object",
+          "cardinality": "1..1",
+          "description": "The person's date of birth.",
+          "alignment": { "fhir": "Patient.birthDate", "pds": "DATE_OF_BIRTH" },
+          "children": [
+            {
+              "name": "date",
+              "type": "Date",
+              "cardinality": "0..1",
+              "description": "ISO8601 formatted date of birth (YYYY-MM-DD)."
+            },
+            {
+              "name": "accuracyIndicator",
+              "type": "Code",
+              "cardinality": "0..1",
+              "description": "Indicates which parts of the date are known to be accurate (A), estimated (E) or unknown (U).",
+              "alignment": { "fhir": "Extension:date-accuracy-indicator" }
+            }
+          ]
+        },
+        {
+          "name": "Address",
+          "type": "Object",
+          "cardinality": "0..*",
+          "description": "Physical location(s) where the person can be contacted.",
+          "alignment": { "fhir": "Patient.address (Address)" },
+          "children": [
+            {
+              "name": "line1",
+              "type": "String",
+              "cardinality": "1..1",
+              "description": "Street address, c/o.",
+              "alignment": { "fhir": "Address.line", "pds": "ADDRESS_LINE1" }
+            },
+            {
+              "name": "line2",
+              "type": "String",
+              "cardinality": "0..1",
+              "description": "Apartment, suite, unit, building, floor, etc.",
+              "alignment": { "fhir": "Address.line", "pds": "ADDRESS_LINE2" }
+            },
+            {
+              "name": "city",
+              "type": "String",
+              "cardinality": "1..1",
+              "description": "City, town, or village.",
+              "alignment": { "fhir": "Address.city" }
+            },
+            {
+              "name": "postcode",
+              "type": "String",
+              "cardinality": "1..1",
+              "description": "Postcode for address.",
+              "alignment": { "fhir": "Address.postalCode", "pds": "POSTCODE" }
+            },
+            {
+              "name": "UPRN",
+              "type": "Float16",
+              "cardinality": "0..1",
+              "description": "Unique Property Reference Number of the address."
+            },
+            {
+              "name": "USRN",
+              "type": "Float16",
+              "cardinality": "0..1",
+              "description": "Unique Street Reference Number of the address."
+            }
+          ]
+        },
+        {
+          "name": "Gender",
+          "type": "Code",
+          "cardinality": "1..1",
+          "description": "The person’s stated gender. This information does not pertain to biological sex.",
+          "alignment": { "fhir": "Extension: UK Core PersonStatedGenderCode", "pds": "PERSON_STATED_GENDER_CODE" }
+        },
+        {
+          "name": "SexCode",
+          "type": "Code",
+          "cardinality": "0..1",
+          "description": "Observed phenotypic sex, where recorded.",
+          "alignment": { "fhir": "Extension: UK Core PersonPhenotypicSex", "pds": "PERSON_PHENOTYPIC_SEX" }
+        }
+      ]
+    }
+  ]
+}
