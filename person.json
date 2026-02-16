@@ -145,14 +145,22 @@
           "type": "Code",
           "cardinality": "1..1",
           "description": "The person’s stated gender. This information does not pertain to biological sex.",
-          "alignment": { "fhir": "Extension: UK Core PersonStatedGenderCode", "pds": "PERSON_STATED_GENDER_CODE" }
+          "alignment": { "fhir": "Extension: UK Core PersonStatedGenderCode", "pds": "PERSON_STATED_GENDER_CODE" },
+          "vocabulary": {
+            "name": "PersonGenderCode",
+            "url": "https://fhir.hl7.org.uk/ValueSet/UKCore-PersonStatedGender"
+          }
         },
         {
           "name": "SexCode",
           "type": "Code",
           "cardinality": "0..1",
           "description": "Observed phenotypic sex, where recorded.",
-          "alignment": { "fhir": "Extension: UK Core PersonPhenotypicSex", "pds": "PERSON_PHENOTYPIC_SEX" }
+          "alignment": { "fhir": "Extension: UK Core PersonPhenotypicSex", "pds": "PERSON_PHENOTYPIC_SEX" },
+          "vocabulary": {
+            "name": "PersonPhenotypicSex",
+            "url": "https://socialcaredata.github.io/controlled-vocabularies/person-phenotypic-sex.jsonld"
+          }
         }
       ]
     }
