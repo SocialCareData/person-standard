@@ -179,7 +179,10 @@
               "type": "Object",
               "cardinality": "0..1",
               "description": "Details about the nature of the relationship (the role of the referenced person).",
-              "alignment": { "fhir": "RelatedPerson.relationship" }
+              "vocabulary": {
+                "name": "PersonRelationship",
+                "url": "https://socialcaredata.github.io/spec/relationship/?tab=specification"
+              }
             }
           ]
         },
@@ -199,7 +202,11 @@
               "name": "relationship",
               "type": "Object",
               "cardinality": "0..1",
-              "description": "Details about the nature of the relationship (the role of the referenced professional)."
+              "description": "Details about the nature of the relationship (the role of the referenced professional).",
+              "vocabulary": {
+                "name": "ProfessionalRelationship",
+                "url": "https://socialcaredata.github.io/spec/relationship/?tab=specification"
+              }
             }
           ]
         }
