@@ -148,7 +148,7 @@
           "alignment": { "fhir": "Extension: UK Core PersonStatedGenderCode", "pds": "PERSON_STATED_GENDER_CODE" },
           "vocabulary": {
             "name": "PersonGenderCode",
-            "url": "https://fhir.hl7.org.uk/ValueSet/UKCore-PersonStatedGender"
+            "url": "#"
           }
         },
         {
@@ -159,8 +159,49 @@
           "alignment": { "fhir": "Extension: UK Core PersonPhenotypicSex", "pds": "PERSON_PHENOTYPIC_SEX" },
           "vocabulary": {
             "name": "PersonPhenotypicSex",
-            "url": "https://socialcaredata.github.io/controlled-vocabularies/person-phenotypic-sex.jsonld"
+            "url": "#"
           }
+        },
+        {
+          "name": "RelatedPerson",
+          "type": "Object",
+          "cardinality": "0..*",
+          "description": "References to other people related to this person. The 'relationship' field describes the role the referenced person plays in this person's life (e.g., Mother, Foster Carer).",
+          "children": [
+            {
+              "name": "ref",
+              "type": "Link",
+              "cardinality": "1..1",
+              "description": "A reference (URI) to another Person record."
+            },
+            {
+              "name": "relationship",
+              "type": "Object",
+              "cardinality": "0..1",
+              "description": "Details about the nature of the relationship (the role of the referenced person).",
+              "alignment": { "fhir": "RelatedPerson.relationship" }
+            }
+          ]
+        },
+        {
+          "name": "RelatedProfessional",
+          "type": "Object",
+          "cardinality": "0..*",
+          "description": "References to professionals related to this person. The 'relationship' field describes the professional's role in this person's life (e.g., Social Worker, GP).",
+          "children": [
+            {
+              "name": "ref",
+              "type": "Link",
+              "cardinality": "1..1",
+              "description": "A reference (URI) to a Professional record."
+            },
+            {
+              "name": "relationship",
+              "type": "Object",
+              "cardinality": "0..1",
+              "description": "Details about the nature of the relationship (the role of the referenced professional)."
+            }
+          ]
         }
       ]
     }
