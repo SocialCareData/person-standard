@@ -187,26 +187,46 @@
           ]
         },
         {
-          "name": "RelatedProfessional",
+          "name": "primaryContactProfessional",
           "type": "Object",
           "cardinality": "0..*",
-          "description": "References to professionals related to this person. The 'relationship' field describes the professional's role in this person's life (e.g., Social Worker, GP).",
+          "description": "References to the primary professionals related to this person. For example, care coordinators or a GP",
           "children": [
             {
               "name": "ref",
               "type": "Link",
               "cardinality": "1..1",
               "description": "A reference (URI) to a Professional record."
+            }
+          ]
+        },
+        {
+          "name": "statuses",
+          "type": "Object",
+          "cardinality": "0..*",
+          "description": "References to the primary professionals related to this person. For example, care coordinators or a GP",
+          "children": [
+            {
+              "name": "attribute",
+              "type": "Code",
+              "cardinality": "1..1",
+              "description": "A StatusCode to describe the type of status (eg. disability, free schoo meals).",
+              "vocabulary": {
+                "name": "StatusCode",
+                "url": "#"
+              }
             },
             {
-              "name": "relationship",
-              "type": "Object",
+              "name": "startDateTime",
+              "type": "DateTime",
+              "cardinality": "1..1",
+              "description": "DateTime (ISO-8601) for start of the life event."
+            },
+            {
+              "name": "endDateTime",
+              "type": "DateTime",
               "cardinality": "0..1",
-              "description": "Details about the nature of the relationship (the role of the referenced professional).",
-              "vocabulary": {
-                "name": "ProfessionalRelationship",
-                "url": "https://socialcaredata.github.io/spec/relationship/?tab=specification"
-              }
+              "description": "DateTime (ISO-8601) for end of the life event."
             }
           ]
         }
