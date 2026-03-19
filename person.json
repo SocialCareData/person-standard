@@ -148,7 +148,7 @@
           "alignment": { "fhir": "Extension: UK Core PersonStatedGenderCode", "pds": "PERSON_STATED_GENDER_CODE" },
           "vocabulary": {
             "name": "PersonGenderCode",
-            "url": "https://www.datadictionary.nhs.uk/data_elements/gender_identity_code.html"
+            "url": "https://www.datadictionary.nhs.uk/data_elements/person_stated_gender_code.html"
           }
         },
         {
