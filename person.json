@@ -65,7 +65,11 @@
               "type": "Code",
               "cardinality": "0..1",
               "description": "How this name instance is used.",
-              "alignment": { "fhir": "HumanName.use" }
+              "alignment": { "fhir": "HumanName.use" },
+              "vocabulary": {
+                "name": "NameUseCode",
+                "url": "https://build.fhir.org/valueset-name-use.html"
+              }
             }
           ]
         },
