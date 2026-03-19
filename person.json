@@ -148,7 +148,7 @@
           "alignment": { "fhir": "Extension: UK Core PersonStatedGenderCode", "pds": "PERSON_STATED_GENDER_CODE" },
           "vocabulary": {
             "name": "PersonGenderCode",
-            "url": "#"
+            "url": "https://www.datadictionary.nhs.uk/data_elements/gender_identity_code.html"
           }
         },
         {
@@ -159,7 +159,7 @@
           "alignment": { "fhir": "Extension: UK Core PersonPhenotypicSex", "pds": "PERSON_PHENOTYPIC_SEX" },
           "vocabulary": {
             "name": "PersonPhenotypicSex",
-            "url": "#"
+            "url": "https://www.datadictionary.nhs.uk/data_elements/person_phenotypic_sex.html"
           }
         },
         {
@@ -210,7 +210,7 @@
               "name": "attribute",
               "type": "Code",
               "cardinality": "1..1",
-              "description": "A StatusCode to describe the type of status (eg. disability, free schoo meals).",
+              "description": "A StatusCode to describe the type of status (eg. disability, free school meals).",
               "vocabulary": {
                 "name": "StatusCode",
                 "url": "#"
