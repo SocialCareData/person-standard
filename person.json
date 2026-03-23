@@ -98,7 +98,7 @@
         {
           "name": "Address",
           "type": "Object",
-          "cardinality": "0..*",
+          "cardinality": "1..*",
           "description": "Physical location(s) where the person can be contacted.",
           "alignment": { "fhir": "Patient.address (Address)" },
           "children": [
