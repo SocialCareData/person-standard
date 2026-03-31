@@ -217,7 +217,7 @@
               "description": "A StatusCode to describe the type of status (eg. disability, free school meals).",
               "vocabulary": {
                 "name": "StatusCode",
-                "url": "#"
+                "url": "https://socialcaredata.github.io/todo.html"
               }
             },
             {
