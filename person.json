@@ -233,6 +233,12 @@
               "description": "DateTime (ISO-8601) for end of the life event."
             }
           ]
+        },
+        {
+          "name": "matchedPersonRef",
+          "type": "Link",
+          "cardinality": "0..1",
+          "description": "A reference (URI) to another ConnectedPerson or Person record, if a match has been identified."
         }
       ]
     },
