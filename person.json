@@ -1,10 +1,10 @@
 {
   "metadata": {
     "title": "Person Data Standard (Identification)",
-    "version": "0.2",
+    "version": "0.3",
     "status": "draft",
-    "effectiveDate": "2025-09-11",
-    "description": "Standardised data fields for identifying individuals in children’s and adult social care systems."
+    "effectiveDate": "2026-04-01",
+    "description": "Standardised data fields for identifying individuals in children’s and adult social care systems, including informal connections."
   },
   "entities": [
     {
@@ -176,7 +176,7 @@
               "name": "ref",
               "type": "Link",
               "cardinality": "1..1",
-              "description": "A reference (URI) to another Person record."
+              "description": "A reference (URI) to another Person or ConnectedPerson record."
             },
             {
               "name": "relationship",
@@ -233,6 +233,44 @@
               "description": "DateTime (ISO-8601) for end of the life event."
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "ConnectedPerson",
+      "description": "Details of a person connected to the subject, where a full Person record is not available, appropriate, or yet matched.",
+      "fields": [
+        {
+          "name": "Name",
+          "type": "String",
+          "cardinality": "1..1",
+          "description": "The known name or description of the person."
+        },
+        {
+          "name": "ContactInformation",
+          "type": "Object",
+          "cardinality": "0..*",
+          "description": "Available contact details.",
+          "children": [
+            {
+              "name": "email",
+              "type": "String",
+              "cardinality": "0..*",
+              "description": "Email address"
+            },
+            {
+              "name": "telephone",
+              "type": "Telephone Number",
+              "cardinality": "0..*",
+              "description": "Telephone Number"
+            }
+          ]
+        },
+        {
+          "name": "matchedPersonRef",
+          "type": "Link",
+          "cardinality": "0..1",
+          "description": "A reference (URI) to a formal Person record, if a match has been identified."
         }
       ]
     }
