@@ -96,6 +96,28 @@
           ]
         },
         {
+          "name": "Deceased",
+          "type": "Object",
+          "cardinality": "1..1",
+          "description": "Indicates if/when the individual is/was deceased.",
+          "alignment": { "fhir": "Patient.deceased" },
+          "children": [
+            {
+              "name": "deceasedStatus",
+              "type": "Boolean",
+              "cardinality": "1..1",
+              "description": "True / False for if person is deceased."
+            },
+            {
+              "name": "date",
+              "type": "Date",
+              "cardinality": "0..1",
+              "description": "ISO8601 formatted date of birth (YYYY-MM-DD).",
+              "alignment": { "pds": "DATE_OF_DEATH" }
+            }
+          ]
+        },
+        {
           "name": "Address",
           "type": "Object",
           "cardinality": "1..*",
@@ -141,6 +163,17 @@
               "type": "Float16",
               "cardinality": "0..1",
               "description": "Unique Street Reference Number of the address."
+            },
+            {
+              "name": "use",
+              "type": "Code",
+              "cardinality": "0..1",
+              "description": "How this address is used.",
+              "alignment": { "fhir": "Address.use" },
+              "vocabulary": {
+                "name": "AddressUseCode",
+                "url": "https://build.fhir.org/valueset-address-use.html"
+              }
             }
           ]
         },
@@ -164,6 +197,16 @@
           "vocabulary": {
             "name": "PersonPhenotypicSex",
             "url": "https://www.datadictionary.nhs.uk/data_elements/person_phenotypic_sex.html"
+          }
+        },
+        {
+          "name": "EthnicCode",
+          "type": "Code",
+          "cardinality": "1..1",
+          "description": "The person's stated ethnicity, according to ONS 18+1 (the categories used in the 2021 census).",
+          "vocabulary": {
+            "name": "PersonEthnicity",
+            "url": "https://www.ons.gov.uk/census/census2021dictionary/variablesbytopic/ethnicgroupnationalidentitylanguageandreligionvariablescensus2021/ethnicgroup/classifications#:~:text=Ethnic%20group%20classification%2020b"
           }
         },
         {
